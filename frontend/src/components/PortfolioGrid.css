@@ -1,0 +1,94 @@
+.portfolio {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 72px 64px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.portfolio__row {
+  display: grid;
+  gap: 28px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 2px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+/* Wide cards (2fr columns) read better a little shorter than tall ones */
+.portfolio__row[style*='2fr'] .card__media {
+  aspect-ratio: 16 / 11;
+}
+
+.card__media-label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.85);
+  text-transform: uppercase;
+}
+
+.card__media--cream .card__media-label,
+.card__media--paper .card__media-label,
+.card__media--blush .card__media-label {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.card__category {
+  margin-top: 14px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6b6b6b;
+}
+
+.card__title {
+  margin-top: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111111;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+
+/* --- Placeholder media variants: replace with real campaign imagery --- */
+.card__media--ink { background: linear-gradient(135deg, #1a1a1a, #333333); }
+.card__media--onyx { background: linear-gradient(160deg, #0d0d0d, #1f1f1f); }
+.card__media--cream { background: linear-gradient(160deg, #f2e6d8, #e7c9a8); }
+.card__media--berry { background: linear-gradient(160deg, #c23a5a, #7a1f38); }
+.card__media--teal { background: linear-gradient(160deg, #0f4a45, #0a2e2b); }
+.card__media--amber { background: linear-gradient(160deg, #d98a3d, #7a3f16); }
+.card__media--olive { background: linear-gradient(120deg, #4c5a34, #2d3620); }
+.card__media--paper { background: linear-gradient(160deg, #f5efe6, #e3dccf); }
+.card__media--denim { background: linear-gradient(160deg, #3a5a8c, #24314a); }
+.card__media--blush { background: linear-gradient(160deg, #ffffff, #f4d9dd); }
+.card__media--maroon { background: linear-gradient(160deg, #5a1414, #2c0808); }
+
+@media (max-width: 900px) {
+  .portfolio {
+    padding: 48px 24px 24px;
+  }
+
+  .portfolio__row {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  .portfolio__row[style*='2fr'] .card__media {
+    aspect-ratio: 4 / 5;
+  }
+}
