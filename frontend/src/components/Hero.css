@@ -1,87 +1,11 @@
 .hero {
   position: relative;
+  z-index: 0;
   width: 100%;
-  min-height: 520px;
+  height: 440px;
   background: #0a0a0a;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* Replace this layer with your actual campaign photography (grayscale portraits). */
-.hero__figures {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 4%;
-  opacity: 0.55;
-  filter: grayscale(1);
-}
-
-.hero__figure {
-  flex: 1;
-  max-width: 220px;
-  height: 88%;
-  border-radius: 50% 50% 0 0 / 30% 30% 0 0;
-  background: radial-gradient(circle at 50% 30%, #6a6a6a, #1a1a1a 70%);
-}
-
-.hero__figure--1 { height: 70%; opacity: 0.7; }
-.hero__figure--2 { height: 84%; opacity: 0.85; }
-.hero__figure--3 { height: 100%; opacity: 1; }
-.hero__figure--4 { height: 84%; opacity: 0.85; }
-.hero__figure--5 { height: 68%; opacity: 0.7; }
-
-.hero__brandmark {
-  position: absolute;
-  top: 40px;
-  right: 56px;
-  color: #ffffff;
-  font-weight: 800;
-  font-size: 22px;
-  letter-spacing: 4px;
-  z-index: 2;
-}
-
-.hero__copy {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  color: #ffffff;
-}
-
-.hero__title {
-  font-family: 'Archivo Expanded', 'Archivo', sans-serif;
-  font-weight: 800;
-  font-size: clamp(48px, 8vw, 96px);
-  letter-spacing: 0.18em;
-  line-height: 1;
-}
-
-.hero__subtitle {
-  margin-top: 18px;
-  font-weight: 500;
-  font-size: clamp(18px, 2.4vw, 26px);
-  letter-spacing: 0.5em;
-  padding-left: 0.5em; /* optically balance the extra letter-spacing */
-}
-
-@media (max-width: 768px) {
-  .hero {
-    min-height: 380px;
-  }
-
-  .hero__brandmark {
-    top: 24px;
-    right: 24px;
-    font-size: 16px;
-    letter-spacing: 2px;
-  }
-
-  .hero__subtitle {
-    letter-spacing: 0.3em;
-  }
 }
