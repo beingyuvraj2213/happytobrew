@@ -8,27 +8,47 @@
 }
 
 .card {
-  flex: 1 1 300px; /* normal card: grow, shrink, base width 300px */
+  flex: 1 1 300px;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .card.wide {
-  flex: 2 1 600px; /* wide card: takes about double the space */
+  flex: 2 1 600px;
 }
 
+/* Wrapper hides the zoom overflow */
+.card-image-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+/* Image */
 .card-image {
   width: 100%;
   aspect-ratio: 3 / 2;
-  object-fit: cover;
   border-radius: 2px;
-  background: #eee; /* shows as a gray box until you add a real image */
+  background: #eee;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
 }
 
- .card.wide .card-image {
+/* Wide cards */
+.card.wide .card-image {
   aspect-ratio: 3 / 1;
-} 
+}
 
+/* Zoom effect */
+.card:hover .card-image {
+  transform: scale(1.08);
+}
 
 .card-category {
   margin-top: 14px;
@@ -58,17 +78,47 @@
   }
 }
 
+/* Placeholder colors */
+.card-image.ink {
+  background: linear-gradient(135deg, #1a1a1a, #333333);
+}
 
-/* Temporary Coloring */
-/* --- Placeholder colors: remove once real images are in place --- */
-.card-image.ink { background: linear-gradient(135deg, #1a1a1a, #333333); }
-.card-image.onyx { background: linear-gradient(160deg, #0d0d0d, #1f1f1f); }
-.card-image.cream { background: linear-gradient(160deg, #f2e6d8, #e7c9a8); }
-.card-image.berry { background: linear-gradient(160deg, #c23a5a, #7a1f38); }
-.card-image.teal { background: linear-gradient(160deg, #0f4a45, #0a2e2b); }
-.card-image.amber { background: linear-gradient(160deg, #d98a3d, #7a3f16); }
-.card-image.olive { background: linear-gradient(120deg, #4c5a34, #2d3620); }
-.card-image.paper { background: linear-gradient(160deg, #f5efe6, #e3dccf); }
-.card-image.denim { background: linear-gradient(160deg, #3a5a8c, #24314a); }
-.card-image.blush { background: linear-gradient(160deg, #ffffff, #f4d9dd); }
-.card-image.maroon { background: linear-gradient(160deg, #5a1414, #2c0808); }
+.card-image.onyx {
+  background: linear-gradient(160deg, #0d0d0d, #1f1f1f);
+}
+
+.card-image.cream {
+  background: linear-gradient(160deg, #f2e6d8, #e7c9a8);
+}
+
+.card-image.berry {
+  background: linear-gradient(160deg, #c23a5a, #7a1f38);
+}
+
+.card-image.teal {
+  background: linear-gradient(160deg, #0f4a45, #0a2e2b);
+}
+
+.card-image.amber {
+  background: linear-gradient(160deg, #d98a3d, #7a3f16);
+}
+
+.card-image.olive {
+  background: linear-gradient(120deg, #4c5a34, #2d3620);
+}
+
+.card-image.paper {
+  background: linear-gradient(160deg, #f5efe6, #e3dccf);
+}
+
+.card-image.denim {
+  background: linear-gradient(160deg, #3a5a8c, #24314a);
+}
+
+.card-image.blush {
+  background: linear-gradient(160deg, #ffffff, #f4d9dd);
+}
+
+.card-image.maroon {
+  background: linear-gradient(160deg, #5a1414, #2c0808);
+}
