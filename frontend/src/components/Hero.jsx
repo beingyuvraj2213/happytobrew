@@ -5,8 +5,8 @@ function Hero() {
     <section className="hero" id="top">
       <video
         className="hero__banner"
-        autoPlay
-        
+        autoPlay    
+        muted  
         loop
         playsInline
       >
