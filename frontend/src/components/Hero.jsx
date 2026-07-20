@@ -3,11 +3,16 @@ import './Hero.css';
 function Hero() {
   return (
     <section className="hero" id="top">
-      <img
-        src="/images/StoneLam.jpg"
-        alt="Mastery Film Festival"
+      <video
         className="hero__banner"
-      />
+        autoPlay
+        muted
+        loop
+        playsInline
+      >
+        <source src="/videos/stonex1.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </section>
   );
 }
