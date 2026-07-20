@@ -6,7 +6,7 @@ function Hero() {
       <video
         className="hero__banner"
         autoPlay
-        muted
+        
         loop
         playsInline
       >
