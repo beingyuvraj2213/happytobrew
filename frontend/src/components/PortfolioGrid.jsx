@@ -1,3 +1,4 @@
+import Reveal from "./Reveal";
 import "./PortfolioGrid.css";
 
 const projects = [
@@ -8,19 +9,26 @@ const projects = [
     wide: false,
     image: "/images/ITC1.avif",
   },
-  {
-    category: "COCA COLA",
-    title: "MINUTE MAID",
-    color: "onyx",
-    wide: false,
-    image: "/images/MinuteMaid.avif",
+    {
+    category: "ITC",
+    title: "WELCOME HOTEL",
+    color: "paper",
+    wide: true,
+    image:"/images/ITC2.avif"
   },
   {
     category: "COCA COLA",
     title: "MAAZA",
     color: "amber",
     image: "/images/Maaza.avif",
+    wide: true,
+  },
+  {
+    category: "COCA COLA",
+    title: "MINUTE MAID",
+    color: "onyx",
     wide: false,
+    image: "/images/MinuteMaid.avif",
   },
   {
     category: "COCA COLA",
@@ -51,25 +59,8 @@ const projects = [
     category: "APPLE",
     title: "AIRPODS",
     color: "onyx",
-    wide: true,
-  },
-  {
-    category: "COCA COLA",
-    title: "MINUTE MAID",
-    color: "paper",
     wide: false,
-  },
-  {
-    category: "COCA COLA",
-    title: "MINUTE MAID",
-    color: "denim",
-    wide: false,
-  },
-  {
-    category: "ITC",
-    title: "WELCOME HOTEL",
-    color: "blush",
-    wide: false,
+    image: "/images/Apple2.avif",
   },
   {
     category: "ITC",
@@ -77,6 +68,7 @@ const projects = [
     image: "/images/StoneX.gif",
     color: "maroon",
     wide: true,
+    banner:true
   },
 ];
 
@@ -84,7 +76,11 @@ function PortfolioGrid() {
   return (
     <div className="portfolio">
       {projects.map((project, index) => (
-        <div key={index} className={`card ${project.wide ? "wide" : ""}`}>
+        <Reveal
+          key={index}
+          as="div"
+          className={`card ${project.wide ? "wide" : ""} ${project.banner ? "banner" : ""}`}
+        >
           <div className="card-image-wrapper">
             {project.image ? (
               <img
@@ -99,7 +95,7 @@ function PortfolioGrid() {
 
           <p className="card-category">{project.category}</p>
           <p className="card-title">{project.title}</p>
-        </div>
+        </Reveal>
       ))}
     </div>
   );

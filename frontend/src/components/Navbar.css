@@ -19,21 +19,32 @@
 }
 
 .navbar__nav a {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+
   font-size: 15px;
   font-weight: 500;
+  color: #666666;
+  text-decoration: none;
+
+  transition: color 0.25s ease;
+}
+
+.navbar__nav a:hover {
   color: #111111;
-  position: relative;
-  padding-bottom: 4px;
 }
 
 .navbar__nav a::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 0%;
+
+  width: 0;
   height: 1.5px;
-  background: #111111;
+
+  background: currentColor;
   transition: width 0.25s ease;
 }
 
