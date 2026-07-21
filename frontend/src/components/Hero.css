@@ -1,7 +1,8 @@
 .hero {
   position: relative;
-  width: calc(100% - 40px);
-  margin: 0 20px;
+  width: 100%;
+  /* width: calc(100% - 40px); */
+  /* margin: 0 20px; */
   background: #0a0a0a;
   display: flex;
   justify-content: center;
@@ -11,8 +12,8 @@
 
 .hero__banner {
   width: 100%;
-  max-height: 450px;
-  height: auto;
+  height: calc(100dvh - 110px);
+  /* height: auto; */
   display: block;
   object-fit: cover;
 }
