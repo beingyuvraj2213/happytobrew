@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <header className="navbar">
       <a href="#top" className="navbar__logo" aria-label="Home">
-        <img src="/images/Logo1.png" alt="logo" width={300} height={70} />
+        <img src="/images/Logo1.png" alt="logo" width={270} height={70} />
       </a>
 
       <nav className="navbar__nav">
