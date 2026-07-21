@@ -8,18 +8,18 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+
+  opacity: 0;
+  transform: scale(0.55);
+  animation: heroIntro 2.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .hero__banner {
   width: 100%;
   height: calc(100dvh - 110px);
+  /* height: auto; */
   display: block;
   object-fit: cover;
-
-  /* Animation */
-  opacity: 0;
-  transform: scale(1.03);
-  animation: heroReveal 1.4s ease forwards;
 }
 
 .hero__dots {
@@ -51,16 +51,14 @@
   transform: scale(1.25);
 }
 
-@keyframes heroReveal {
+@keyframes heroIntro {
   from {
     opacity: 0;
-    transform: scale(1.03);
-    filter: blur(6px);
+    transform: scale(0.55);
   }
 
   to {
     opacity: 1;
     transform: scale(1);
-    filter: blur(0);
   }
 }
