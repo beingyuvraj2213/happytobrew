@@ -49,7 +49,7 @@ const projects = [
     title: "Create Your Imprint on Time",
     color: "teal",
     wide: true,
-    image: "/images/StoneX.gif",
+    // image: "/images/StoneX.gif",
   },
   {
     category: "COCA COLA",
