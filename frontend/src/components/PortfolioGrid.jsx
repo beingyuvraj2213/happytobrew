@@ -3,25 +3,25 @@ import "./PortfolioGrid.css";
 
 const projects = [
   {
+    category: "COCA COLA",
+    title: "MAAZA",
+    color: "amber",
+    wide: true,
+    image: "/images/Maaza.avif",
+  },
+  {
     category: "ITC",
     title: "WELCOME HOTEL",
     color: "ink",
     wide: false,
     image: "/images/ITC1.avif",
   },
-    {
+  {
     category: "ITC",
     title: "WELCOME HOTEL",
     color: "paper",
-    wide: true,
-    image:"/images/ITC2.avif"
-  },
-  {
-    category: "COCA COLA",
-    title: "MAAZA",
-    color: "amber",
-    image: "/images/Maaza.avif",
-    wide: true,
+    wide: false,
+    image: "/images/ITC2.avif",
   },
   {
     category: "COCA COLA",
@@ -29,6 +29,27 @@ const projects = [
     color: "onyx",
     wide: false,
     image: "/images/MinuteMaid.avif",
+  },
+  {
+    category: "APPLE",
+    title: "AIRPODS",
+    color: "onyx",
+    wide: false,
+    image: "/images/Apple2.avif",
+  },
+  {
+    category: "APPLE",
+    title: "IPAD",
+    color: "olive",
+    wide: true,
+    image: "/images/Apple.avif",
+  },
+  {
+    category: "STONE X",
+    title: "Create Your Imprint on Time",
+    color: "teal",
+    wide: true,
+    image: "/images/StoneX.gif",
   },
   {
     category: "COCA COLA",
@@ -43,32 +64,12 @@ const projects = [
     wide: false,
   },
   {
-    category: "STONE X",
-    title: "Create Your Imprint on Time",
-    color: "teal",
-    wide: false,
-  },
-  {
-    category: "APPLE",
-    title: "IPAD",
-    color: "olive",
-    wide: true,
-    image: "/images/Apple.avif",
-  },
-  {
-    category: "APPLE",
-    title: "AIRPODS",
-    color: "onyx",
-    wide: false,
-    image: "/images/Apple2.avif",
-  },
-  {
     category: "ITC",
     title: "ITC'S HOTEL GROUP",
     image: "/images/StoneX.gif",
     color: "maroon",
     wide: true,
-    banner:true
+    banner: true,
   },
 ];
 
