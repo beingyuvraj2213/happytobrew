@@ -1,15 +1,20 @@
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import PortfolioGrid from './components/PortfolioGrid';
 import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
 import './App.css';
 
 function App() {
   return (
     <div className="app">
       <Navbar />
-      <Hero />
-      <PortfolioGrid />
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
+
       <Footer />
     </div>
   );
